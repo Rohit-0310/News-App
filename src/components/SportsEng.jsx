@@ -3,16 +3,16 @@ import Navbar from './Navbar'
 import "./Style.scss";
 import { useQuery } from '@tanstack/react-query';
 
+const fetchNews = () => {
+    return fetch("https://daily-news-network-nestjs.herokuapp.com/api/v1/inshorts/en/sportNews")
+        .then((res) => res.json())
+}
 
-const Home = () => {
+const SportsEng = () => {
 
-    const { isLoading, data } = useQuery('news', () => {
-        return fetch("https://daily-news-network-nestjs.herokuapp.com/api/v1/inshorts/en/dashboardNews")
-            .then((res) => res.json())
-    })
+    const { isLoading, data } = useQuery(['news'], fetchNews)
 
     if (isLoading) return <h2 className='loading'>Loading...!</h2>
-
 
     console.log("data", data)
 
@@ -42,4 +42,5 @@ const Home = () => {
     )
 }
 
-export default Home
+export default SportsEng
+
