@@ -9,21 +9,16 @@ const fetchNews = () => {
 }
 const Home = () => {
 
-    // const { isLoading, data } = useQuery('news', () => {
-    //     return fetch("https://daily-news-network-nestjs.herokuapp.com/api/v1/inshorts/en/dashboardNews")
-    //         .then((res) => res.json())
-    // })
-
-    // if (isLoading) return <h2 className='loading'>Loading...!</h2>
-
-
-    // console.log("data", data)
-
-    const { isLoading, data } = useQuery(['news'], fetchNews)
+    const { isLoading, data } = useQuery('news', () => {
+        return fetch("https://daily-news-network-nestjs.herokuapp.com/api/v1/inshorts/en/dashboardNews")
+            .then((res) => res.json())
+    })
 
     if (isLoading) return <h2 className='loading'>Loading...!</h2>
 
+
     console.log("data", data)
+
     return (
         <>
             <Navbar />
