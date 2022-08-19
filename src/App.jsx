@@ -4,6 +4,7 @@ import Home from './components/Home';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Dashboard from './components/Dashboard.jsx';
 import SportsEng from './components/SportsEng';
+import TechnologyNews from './components/TechnologyNews';
 
 const queryClient = new QueryClient()
 
@@ -16,6 +17,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/Dashboard" element={<Dashboard />} />
                     <Route path="/SportsEnglish" element={<SportsEng />} />
+                    <Route path="/TechNews" element={<TechnologyNews />} />
 
                 </Routes>
             </div>
