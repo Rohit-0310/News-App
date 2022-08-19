@@ -5,7 +5,7 @@ import "./NavStyle.scss";
 
 
 
-const Navbar = () => {
+const Navbar = ():JSX.Element => {
     return (
         <div className='topNav'>
             <div>

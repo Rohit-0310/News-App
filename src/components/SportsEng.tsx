@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './Navbar.tsx'
 import "./Style.scss";
 import { useQuery } from '@tanstack/react-query';
 

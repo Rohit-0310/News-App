@@ -1,7 +1,8 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './Navbar.tsx';
+import "./Style.scss";
 
-const Dashboard = () => {
+const Dashboard = (): JSX.Element => {
     return (
         <div>
             <Navbar />
